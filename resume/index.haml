@@ -1,0 +1,198 @@
+---
+layout: default
+---
+.container.wrapper
+  .row
+    .col-md-5
+      %h1 Pierre-Gildas MILLON
+      %h2 Architecte Applicatif
+    .col-md-5
+      .objective
+        %i.fa.fa-comment-o
+        Ma mission : accompagner les équipes de développement à produire des livrables de qualité en mettant en place des outils, et en fournissant de nouveaux indicateurs qualitatifs;
+        ramener la communication avec les équipes infra pour travailler ensemble à la réussite du produit.
+    .col-md-2.text-right.toplinks.hidden-print
+      %a{:href => "pgmillon.pdf"}
+        PDF
+        %i.fa.fa-file-pdf-o
+      %br
+      %a(onclick = "javascript:window.print();" href="#")
+        Print
+        %i.fa.fa-print
+  .row
+    .col-md-8.col-sm-12
+      .row
+        .col-md-12.experiences
+          %h3 Expérience Professionnelle
+{% for experience in site.data.resume.experiences %}
+          .row
+{% haml resume/experiences/{{experience}}.haml %}
+{% endfor %}
+      .row
+        .col-md-12.trainings
+          %h3 Formations
+          .row
+            .col-md-4
+              %h4 Xebia Labs
+              .year 2013
+            .col-md-8.description
+              %a{:href => "http://training.xebia.fr/techniques/devops/formation-deployit"}Formation XL Deploy
+          .row
+            .col-md-4
+              %h4 Sun
+              .year 2008
+            .col-md-8.description
+              Sun Certified Java Programmer (Java 1.6)
+          .row
+            .col-md-4
+              %h4 Supinfo Paris
+              .year 2003-2008
+            .col-md-8.description
+              %a{:href => "http://www.supinfo.com/Cursus/"}Master of Computer Science
+    .col-md-4.col-sm-12
+      .row
+        .col-md-12.col-sm-6
+          %h3 Compétences
+          %ul.skills.list-unstyled
+            %li
+              %ul.list-inline
+                %li
+                  %a DevOps
+                %li
+                  %a Agile
+                %li
+                  %a Scrum
+                %li
+                  %a XP
+                %li
+                  %a Puppet
+                %li
+                  %a RPM
+                %li
+                  %a XLDeploy
+                %li
+                  %a Java
+                %li
+                  %a PHP
+                %li
+                  %a Python
+                %li
+                  %a .Net
+                %li
+                  %a Git
+                %li
+                  %a Mercurial
+                %li
+                  %a SVN
+                %li
+                  %a Jenkins
+                %li
+                  %a Maven
+                %li
+                  %a Sonar
+                %li
+                  %a Glassfish
+                %li
+                  %a JBoss
+                %li
+                  %a Tomcat
+                %li
+                  %a Nginx
+                %li
+                  %a Lighttpd
+                %li
+                  %a Apache
+                %li
+                  %a PostgreSQL
+                %li
+                  %a MySQL
+                %li
+                  %a Oracle
+                %li
+                  %a Silex
+                %li
+                  %a Symfony
+                %li
+                  %a Zend Framework
+                %li
+                  %a Play!
+                %li
+                  %a Spring
+                %li
+                  %a Magento
+                %li
+                  %a Drupal
+                %li
+                  %a Nuxeo
+                %li
+                  %a Alfresco
+        .col-md-12.col-sm-6.traits
+          %h3 Personnalité
+          %ul
+            %li
+              %a Investissement
+            %li
+              %a Travail Collaboratif
+            %li
+              %a Curiosité
+            %li
+              %a Communication
+            %li
+              %a Perfectionnisme
+        .col-md-12.col-sm-6.languages
+          %h3 Langues
+          %ul
+            %li
+              %a Anglais Courant
+        .col-md-12.col-sm-6.hobbies
+          %h3 Loisirs
+          %ul
+            %li
+              %a Bricolage
+            %li
+              %a Équitation
+        .col-md-12.col-sm-6.socials
+          %h3 Réseaux sociaux
+          .row
+            .social.col-md-5.col-sm-5.col-xs-12.col-md-offset-1.col-sm-offset-1
+              %i.fa.fa-twitter
+              %a{:href => "https://twitter.com/pgmillon"} Twitter
+          .row
+            .social.col-md-5.col-sm-5.col-xs-12.col-md-offset-1.col-sm-offset-1
+              %i.fa.fa-github
+              %a{:href => "https://github.com/pgmillon"} Github
+          .row
+            .social.col-md-5.col-sm-5.col-xs-12.col-md-offset-1.col-sm-offset-1
+              %i.el-icon-viadeo
+              %a{:href => "http://www.viadeo.com/profile/002igljzoz3fknw"} Viadeo
+          .row
+            .social.col-md-5.col-sm-5.col-xs-12.col-md-offset-1.col-sm-offset-1
+              %i.fa.fa-linkedin
+              %a{:href => "https://www.linkedin.com/profile/view?id=61068511"} LinkedIn
+        .col-md-12.col-sm-6
+          %h3 Contacts
+          .row
+            .col-md-6.col-sm-6.col-xs-4
+              %i.fa.fa-phone
+              Phone
+            .col-md-6.col-sm-6.col-xs-8
+              +33 (0)6 60 10 02 68
+          .row
+            .col-md-6.col-sm-6.col-xs-4
+              %i.fa.fa-envelope-o
+              Email
+            .col-md-6.col-sm-6.col-xs-8
+              %a{:href => "mailto:pg.millon+ghpages@gmail.com"}pg.millon@gmail.com
+  .row.hidden-print
+    .col-md-12.hidden-xs
+      %h3 Adresse
+      %div#my-location
+  .row.links.last.hidden-print
+    .col-md-12.text-right
+      © 2015 Pierre-Gildas MILLON
+      %a{:href => "#top"}
+        Scroll to top
+        %i.fa.fa-arrow-up
+
+%script{:src => "https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"}
+%script{:src => "/js/resume.js"}

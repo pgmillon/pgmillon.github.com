@@ -1,0 +1,18 @@
+{
+  "name": "pgmillon.github.io",
+  "version": "1.0.0",
+  "devDependencies": {
+    "bower": "*",
+    "connect-livereload": "*",
+    "grunt": "~0.4.1",
+    "grunt-connect-proxy": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-exec": "*",
+    "grunt-haml": "^0.9.0",
+    "matchdep": "*",
+    "phantomjs": "~1.9.16"
+  }
+}
