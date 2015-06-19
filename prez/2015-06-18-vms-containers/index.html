@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>VMS & Conteneurs</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+    <style type="text/css">
+      span.clouditem {
+        padding-left: 0.15em;
+        padding-right: 0.15em;
+        line-height: 90%;
+      }
+    </style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+    <section>
+      <h1>VMs & Conteneurs</h1>
+      <h2>État des lieux et use cases</h2>
+    </section>
+    <section data-background="media/lego_bg.jpg">
+      <h3>Who am I ?</h3>
+      <img style="width: auto; height: 250px;" src="media/ishtanzar.png" />
+      <p>Pierre-Gildas MILLON</p>
+      <p>Architecte</p>
+      <p>Dev</p>
+      <p><span style="text-decoration: line-through">Sysadmin</span> Ops</p>
+    </section>
+    <section data-background="media/Parchment-background-small.jpg">
+      <h3>Un peu d'histoire</h3>
+    </section>
+    <section>
+      <ul>
+        <li>1964 IBM CP-40 : Virtual machine/memory time sharing</li>
+        <li class="fragment">1977 OpenVMS : OS multi-utilisateurs</li>
+        <li class="fragment">1979 Chroot</li>
+        <li class="fragment">1988 SoftPC : Emulation x86</li>
+        <li class="fragment">1997 VirtualPC Mac</li>
+        <li class="fragment">1999 VMWare</li>
+        <li class="fragment">2000 FreeBSD jail</li>
+        <li class="fragment">2001 VirtualPC Windows, Virtuozzo</li>
+        <li class="fragment">2003 Xen, Qemu</li>
+        <li class="fragment">2004 Solaris Zones</li>
+        <li class="fragment">2006 Parallels Mac</li>
+        <li class="fragment">2007 VirtualBox, KVM</li>
+        <li class="fragment">2008 HyperV, LXC</li>
+        <li class="fragment">2013 Docker, LMCTFY</li>
+      </ul>
+      <aside class="notes">
+        <ul>
+          <li>time sharing : partage des cycles entre les utilisateurs</li>
+          <li>OpenVMS : dernière release le 01/06/2015</li>
+          <li>SoftPC : MS-DOS sous Linux</li>
+          <li>Virtualbox : Développé par Innoteck qui a bossé pour Connectix (VirtualPC)</li>
+          <li>Qemu : Émulation de CPU, possibilité d'utiliser KVM</li>
+          <li>Zones : Chroot on steroids</li>
+          <li>Parallels : 1er virtualisation pour Mac Intel</li>
+        </ul>
+      </aside>
+    </section>
+    <section>
+      <h3>Hyperviseurs</h3>
+      <img src="media/Hyperviseur.png" style="width: auto; height: 400px;" />
+    </section>
+    <section>
+      <h3>Hyperviseurs</h3>
+      <h4>Natifs</h4>
+      <ul>
+        <li class="fragment">VMWare ESXi</li>
+        <li class="fragment">Hyper-V</li>
+        <li class="fragment">Xen</li>
+        <li class="fragment">KVM</li>
+      </ul>
+    </section>
+    <section>
+      <h3>Hyperviseurs</h3>
+      <h4>Hébergés</h4>
+      <ul>
+        <li class="fragment">Qemu</li>
+        <li class="fragment">VMWare Workstation</li>
+        <li class="fragment">VirtualBox</li>
+      </ul>
+    </section>
+    <section>
+      <h3>Conteneurs</h3>
+      <ul>
+        <li class="fragment">FreeBSD Jails</li>
+        <li class="fragment">Solaris Zones</li>
+        <li class="fragment">LXC / Virtuozzo</li>
+        <li class="fragment">Docker</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Use cases</h2>
+    </section>
+    <section>
+      <h3>Xen : Amazon EC2, OpenStack</h3>
+      <ul>
+        <li>Para-Virtualization</li>
+        <li>Full Virtualization</li>
+      </ul>
+      <aside class="notes">
+        <ul>
+          <li>Para-API</li>
+          <li>Full : Exposition d'un matériel virtuel</li>
+        </ul>
+      </aside>
+    </section>
+    <section>
+      <h3>KVM : RHEV, Proxmox, OpenStack</h3>
+    </section>
+    <section>
+      <h3>Hyper-V : Ineat</h3>
+      <aside class="notes">
+        <ul>
+          <li>2 lames, un hyperviseur</li>
+          <li>Template</li>
+          <li>Héritage</li>
+        </ul>
+      </aside>
+    </section>
+    <section>
+      <h3>OpenVZ : ProxMox</h3>
+    </section>
+    <section>
+      <h3>VirtualBox + LXC</h3>
+      <h4>Réutiliser un vieux portable</h4>
+    </section>
+    <section>
+      <h3>Docker</h3>
+      <ul>
+        <li>Environnement de DEV local</li>
+        <li>Environnement de debug</li>
+        <li>Un binaire non supporté (RPMBUILD)</li>
+      </ul>
+    </section>
+    <section>
+      <h2>The Killing Machine</h2>
+      <h3>VM + Container</h3>
+    </section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
